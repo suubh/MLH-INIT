@@ -1,0 +1,85 @@
+html
+{
+	font-family: sans-serif;
+}
+body 
+{
+	width: 50%;
+	max-width: 800px;
+	min-width: 480px;
+	margin: 0 auto;
+    background-image: url("back-yup.jpg");
+}
+.game{
+    margin: 10px;
+    background-color:black;
+    color: white;
+    /* border: 1px solid; */
+    border-radius:15px;
+    box-shadow: 2px 2px 18px 7px #1dd85c;
+}
+.guessSubmit{
+    font-family: 'Kirang Haerang', cursive;
+    letter-spacing:2px;
+    border: none;
+    background: #f7f1f1;
+    color: #0c0c0c !important;
+    font-weight: 100;
+    padding: 20px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+}
+.guessSubmit:hover{
+    color: #1dd85c !important;
+    font-weight: 700 !important;
+    letter-spacing: 3px;
+    background: none;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.3s ease 0s;
+}
+.title{
+    margin: 10px;
+    font-family: 'Kirang Haerang', cursive;
+    color:#1dd85c;
+    text-align: center;
+}
+.form{
+    background-color: #242B2E;
+    border-radius: 6px;
+    margin-left: 80px;
+    margin-right:80px;
+    margin-bottom:15px;
+    font-family: 'Orbitron', sans-serif;
+}
+.button{
+    margin:30px;
+    text-align:center;
+    align-items:center;
+    font-family: 'Kirang Haerang', cursive;
+
+}
+.guessField_A{
+    font-weight: 50;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+}
+.guessField_B{
+    font-weight: 50;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+}
+h2,label{
+    margin-left: 10px;
+}
+.form p{
+    color:#242B2E;
+}
+.me a{
+    color:#1dd85c;
+    padding: 10px;
+}
