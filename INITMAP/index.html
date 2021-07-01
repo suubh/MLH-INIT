@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+	<title>INIT MAP</title>
+	<meta charset="utf-8">
+	<style>
+		body{
+			background-color: black;
+			color: orange;
+		}
+		h2{
+			text-align: center;
+		}
+		#map{
+			border-radius: 10px;
+			height: 800px;
+			width: 70%;
+			margin-left:225px ;
+		}
+	</style>
+</head>
+<body>
+	<h2>-- EddieHub --</h2>
+	<div id="map"></div>
+	<script>
+		function initMap(){
+			var options = {
+				zoom:5,
+				center:{lat:20.5937,lng:78.9629}
+			}
+			//MAP
+			var map=new google.maps.Map(document.getElementById('map'),options); 
+
+			addMarker({
+				coords:{lat:27.6692,lng:95.8644},
+				iconImage:'shubham.jpg',
+				content:'<h1>Shubham Singh</h1><p>EddieHub</p>'
+			});
+			addMarker({
+				coords:{lat:22.2779,lng:86.7249},
+				iconImage:'tamojeet.png',
+				content:'<h1>Tamojeet Kuila</h1><p>EddieHub</p>'
+			});
+			addMarker({
+				coords:{lat:28.5355,lng:77.3910},
+				iconImage:'manasi.jpg',
+				content:'<h1>Manasi Chhibber</h1><p>EddieHub</p>'
+			});
+			addMarker({
+				coords:{lat:26.4499,lng:80.3319},
+				iconImage:'utkarsh.jpg',
+				content:'<h1>Utkarsh Maurya</h1><p>EddieHub</p>'
+			});
+
+			function addMarker(props){
+				var marker=new google.maps.Marker({
+				position:props.coords,
+				map:map,
+				icon:props.iconImage,
+				});
+
+				if(props.content){
+					var infoWindows=new google.maps.InfoWindow({
+						content:props.content
+					});
+					marker.addListener('click',function(){
+						infoWindows.open(map,marker);
+					});
+				}				
+			}
+		}
+	</script>
+	<script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDL-X9Tf-s2RzNQcp8j2wpzVr1APigqFJ8&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+</body>
+</html>
